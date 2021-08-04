@@ -1,0 +1,28 @@
+1. wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+sudo apt-get update
+
+
+2. sudo apt-get install libcudnn8=8.1.1.*-1+cuda11.2
+sudo apt-get install libcudnn8-dev=8.1.1.*-1+cuda11.2
+
+
+Tar File Installation:
+
+1. tar -xzvf cudnn-11.2-linux-x64-v8.1.1.33.tgz
+ 
+sudo cp cuda/include/cudnn*.h /cuda/include
+
+sudo cp -P cuda/lib64/libcudnn* cuda/lib64 
+
+
+sudo chmod a+r cuda/include/cudnn*.h cuda/lib64/libcudnn*
+
+
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.2 LTS
+Release:        20.04
+Codename:       focal

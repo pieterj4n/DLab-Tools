@@ -1,0 +1,1 @@
+gzip('D:\Pieterjan\nnUNet_raw_data_base\nnUNet_raw_data\Task303_LiverLITS\imagesTs\*.nii') %
